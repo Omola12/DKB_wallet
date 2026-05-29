@@ -444,7 +444,7 @@
 <script>
   // Logout functionality
 const logoutBtn = // Replace this line inside logout event listener:
-document.getElementById('loginIdentifier').value = 'highrevinkevin3@gmail.co';
+document.getElementById('loginIdentifier').value = 'highrevinkevin3@gmail.com';
   logoutBtn.addEventListener('click', () => {
     // Hide dashboard, show login view
     document.getElementById('dashboardView').classList.add('hidden');
@@ -467,7 +467,7 @@ function performLogin() {
     dashboardView.classList.remove('hidden');
     loadDashboard();
   } else {
-    alert("Invalid credentials.\nUse:\nEmail: highrevinkevin3@gmail.co\nUsername: highrevinkevin3\nPassword: #Highkevin@109");
+    alert("Invalid credentials");
   }
 }
   // pre-created credentials (exactly as given)
