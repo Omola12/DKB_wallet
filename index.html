@@ -442,6 +442,20 @@
 </div>
 
 <script>
+  // Logout functionality
+const logoutBtn = document.getElementById('logoutBtn');
+if(logoutBtn) {
+  logoutBtn.addEventListener('click', () => {
+    // Hide dashboard, show login view
+    document.getElementById('dashboardView').classList.add('hidden');
+    document.getElementById('loginView').classList.remove('hidden');
+    // Clear any modal if open
+    document.getElementById('frozenModal').classList.remove('active');
+    // Reset form fields to default pre-created credentials
+    document.getElementById('loginEmail').value = 'highrevinkevin3@gmail.co';
+    document.getElementById('loginPassword').value = '#Highkevin@109';
+  });
+}
   // pre-created credentials (exactly as given)
   const PRE_EMAIL = "highrevinkevin3@gmail.com";
   const PRE_PASSWORD = "#Highkevin@109";
