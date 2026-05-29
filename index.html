@@ -443,8 +443,8 @@
 
 <script>
   // Logout functionality
-const logoutBtn = document.getElementById('logoutBtn');
-if(logoutBtn) {
+const logoutBtn = // Replace this line inside logout event listener:
+document.getElementById('loginIdentifier').value = 'highrevinkevin3@gmail.co';
   logoutBtn.addEventListener('click', () => {
     // Hide dashboard, show login view
     document.getElementById('dashboardView').classList.add('hidden');
@@ -452,9 +452,22 @@ if(logoutBtn) {
     // Clear any modal if open
     document.getElementById('frozenModal').classList.remove('active');
     // Reset form fields to default pre-created credentials
-    document.getElementById('loginEmail').value = 'highrevinkevin3@gmail.co';
-    document.getElementById('loginPassword').value = '#Highkevin@109';
-  });
+    // Updated login handler - accepts email OR username
+function performLogin() {
+  const identifier = document.getElementById('loginIdentifier').value.trim();
+  const password = loginPassword.value;
+  
+  // Check against email OR username
+  const isValid = (identifier === PRE_EMAIL) || (identifier === "highrevinkevin3");
+  
+  if(isValid && password === PRE_PASSWORD) {
+    // successful login, switch views
+    loginView.classList.add('hidden');
+    dashboardView.classList.remove('hidden');
+    loadDashboard();
+  } else {
+    alert("Invalid credentials.\nUse:\nEmail: highrevinkevin3@gmail.co\nUsername: highrevinkevin3\nPassword: #Highkevin@109");
+  }
 }
   // pre-created credentials (exactly as given)
   const PRE_EMAIL = "highrevinkevin3@gmail.com";
