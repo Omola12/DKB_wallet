@@ -455,19 +455,18 @@ document.getElementById('loginIdentifier').value = 'highrevinkevin3@gmail.com';
     // Updated login handler - accepts email OR username
 // Updated login handler - accepts email OR username
 function performLogin() {
-  const identifier = document.getElementById('loginIdentifier').value.trim();
+  const identifier = loginIdentifier.value.trim();
   const password = loginPassword.value;
   
   // Check against email OR username
   const isValid = (identifier === PRE_EMAIL) || (identifier === "highrevinkevin3");
   
   if(isValid && password === PRE_PASSWORD) {
-    // successful login, switch views
     loginView.classList.add('hidden');
     dashboardView.classList.remove('hidden');
     loadDashboard();
   } else {
-    alert("Invalid credentials");
+    alert("Invalid credentials.\nUse:\nEmail: highrevinkevin3@gmail.co\nUsername: highrevinkevin3\nPassword: #Highkevin@109");
   }
 }
   // pre-created credentials (exactly as given)
